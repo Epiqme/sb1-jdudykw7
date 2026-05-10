@@ -1,6 +1,17 @@
 {
   "permissions": {
-    "allow": []
+    "allow": [
+      "Bash(npm run type-check)",
+      "Bash(npm install*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(find*)",
+      "Bash(ls*)"
+    ]
   },
   "hooks": {
     "SessionStart": [
@@ -9,6 +20,29 @@
           {
             "type": "command",
             "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/typecheck.sh",
+            "timeout": 30,
+            "statusMessage": "Type-checking src/..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "summary=$(git -C \"${CLAUDE_PROJECT_DIR:-.}\" status --short 2>/dev/null | head -5); [ -z \"$summary\" ] && echo '{\"systemMessage\":\"Working tree clean.\"}' || { count=$(git -C \"${CLAUDE_PROJECT_DIR:-.}\" status --short 2>/dev/null | wc -l | tr -d ' '); oneline=$(git -C \"${CLAUDE_PROJECT_DIR:-.}\" status --short 2>/dev/null | tr '\\n' ' ' | cut -c1-120); echo \"{\\\"systemMessage\\\":\\\"$count uncommitted file(s): $oneline\\\"}\"; }"
           }
         ]
       }
