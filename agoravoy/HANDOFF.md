@@ -9,7 +9,7 @@ Agoravoy is Epiq Richman's one-person travel agency selling Virgin Voyages cruis
 The build has four parts:
 
 1. **CAM (Content Automation Machine)** — an n8n cloud workflow that turns one-line video ideas in a Google Sheet into rendered HeyGen avatar videos. Sheet row status flow: IDEA → SCRIPTED → GENERATING → VIDEO READY (+ video URL written back).
-2. **Local video post-production pipeline** — ffmpeg-based. Takes the HeyGen avatar render and replaces sections with Epiq's REAL trip footage (~195 iPhone clips in ~/Downloads), burns Anton-font word-pop captions, grades, mixes, exports platform-ready 9:16. This pass is what makes the videos good; CAM alone produces only the raw avatar base.
+2. **Local video post-production pipeline** — ffmpeg-based. Takes the HeyGen avatar render and replaces sections with Epiq's REAL trip footage (~195 iPhone clips in ~/Downloads), burns Bebas Neue word-pop captions (see BRAND.md), grades, mixes, exports platform-ready 9:16. This pass is what makes the videos good; CAM alone produces only the raw avatar base.
 3. **The site** — static HTML on Netlify (source in Site/), deploy locked to a review permalink, live domain agoravoy.com still shows placeholder. Free Deal Scan form posts to Formspree.
 4. **Deal watch** — deals-watch.md is the baseline of Virgin's current offers; compare against virginvoyages.com/cruise-deals, update file after each check.
 
@@ -45,12 +45,12 @@ Full commands in `pipeline/video-build-recipe.md`. Summary:
 1. Verify the deal/content facts live (deals-watch.md rules; banned words: solo, "eating alone", crew; no em dashes; numbers as words).
 2. Script ≈80 words for ~30s. HeyGen Video Agent in CHAT mode (not Auto-pilot), avatar-only render: "NO B-roll, NO music, NO on-screen text", epiqrichman avatar (tropical shirt look) + epiqrichman voice clone, 9:16 1080p. Download video + SRT.
 3. Build locally at 25fps frame-exact: avatar hook (open on B-roll, avatar enters ~1.4s), 36-frame real-clip shots, avatar CTA, end card. AUDIO UNTOUCHED = lip sync exact.
-4. Captions: `make_ass.py` converts the SRT to Anton word-pop ASS chunks (white, red #E10A0A keywords, safe-zone margins). Burn with `ass=captions.ass:fontsdir=<Anton dir>`.
+4. Captions: `make_ass.py` converts the SRT to Bebas Neue word-pop ASS chunks (BRAND.md spec) (white, red #E10A0A keywords, safe-zone margins). Burn with `ass=captions.ass:fontsdir=agoravoy/assets`.
 5. Grade everything (avatar too) with the teal-orange chain + grain (in recipe file).
 6. **CRITICAL: deliver ONE continuous encode.** `ffmpeg -f concat -i list.txt -c:v libx264 ...` re-encode. NEVER ship a `-c copy` concat of separately-encoded pieces — probes clean but QuickTime freezes at seams and decode drops frames (killed video 5 v1 and v2).
 7. Export: 1080x1920 H.264 12M, AAC 256k 48kHz, -14 LUFS loudnorm, +faststart. Master to `Videos/` named `YYYY-MM-DD-videoN-<slug>-vN.mp4`.
 
-Brand: red #E10A0A, ocean blue #00A8D8, white; font Anton (`Assets/Anton-Regular.ttf`); tagline "BOOK VIRGIN. BOARD WITH FRIENDS."; end card = white AGORAVOY.COM in red box on ocean blue.
+Brand: red #E10A0A, ocean blue #00A8D8, white; font Bebas Neue (`agoravoy/assets/BebasNeue.ttf` — replaced Anton 7/13, see BRAND.md); tagline "BOOK VIRGIN. BOARD WITH FRIENDS."; end card = white AGORAVOY.COM in red box on ocean blue.
 
 Raw footage: ~195 UUID-named clips in ~/Downloads (real Virgin ship + excursion footage, all SDR bt709). Best-clip IDs with timestamps are logged in STATUS.md ("TOP ACTION CLIPS FOUND"). 10 pre-trimmed/graded picks in `Assets/video4-real-clips/`.
 
@@ -71,12 +71,12 @@ Raw footage: ~195 UUID-named clips in ~/Downloads (real Virgin ship + excursion 
 | VIDEO-QUALITY-PLAYBOOK.md | Research-backed quality spec — follow for every video. *(in this repo + Google Drive)* |
 | deals-watch.md | Virgin offer baseline (updated 7/13) + watcher rules + banned words. *(Cowork HQ)* |
 | HANDOFF/pipeline/video-build-recipe.md | Exact ffmpeg commands for the video 5 method. *(in this repo: `pipeline/`)* |
-| HANDOFF/pipeline/make_ass.py | SRT → Anton word-pop ASS caption generator. *(in this repo: `pipeline/`)* |
+| HANDOFF/pipeline/make_ass.py | SRT → word-pop ASS caption generator (Bebas Neue per BRAND.md). *(in this repo: `pipeline/`)* |
 | HANDOFF/pipeline/captions-sample.ass | Example output (video 5's actual captions). *(Cowork HQ — not transferred)* |
 | HANDOFF/CREDENTIALS.md | Every account/key needed (names only). *(in this repo)* |
 | Scripts/CAM-v2-blueprint.md | CAM architecture + productization plan. *(Cowork HQ)* |
 | Scripts/CAM-v2-n8n-workflow.json | n8n workflow export (NOTE: stale — uses v2 API; live workflow in n8n uses v3. Re-export before selling). *(Cowork HQ)* |
-| Assets/Anton-Regular.ttf | Brand font (use for every render). *(Cowork HQ / Epiq's Mac)* |
+| Assets/Anton-Regular.ttf | RETIRED brand font (Bebas Neue replaced it 7/13). *(Cowork HQ / Epiq's Mac)* |
 | Assets/video4-real-clips/ | 10 trimmed, HeyGen-uploadable real clips, named by content. *(Cowork HQ / Epiq's Mac)* |
 | Site/ | Full site source (styles.css holds brand color variables). *(Cowork HQ)* |
 | Videos/ | All builds. video4 v8 + video5 v3 are the keepers. *(Cowork HQ / Epiq's Mac)* |

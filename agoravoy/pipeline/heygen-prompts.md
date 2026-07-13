@@ -14,14 +14,14 @@ Submitted 7/13 to chat "Create Agoravoy Video"; plan artifact "Agoravoy: Real Ad
 
 > Revise "Agoravoy: Real Adventure Experience". Keep portrait 9:16, about thirty-five seconds, same epiqrichman avatar and epiqrichman voice clone, same script. Follow this scene plan exactly.
 >
-> GLOBAL STYLE: Cinematic, high-energy travel-ad pacing. Quick cuts, one to two seconds per B-roll shot. No dead air anywhere; every second has voiceover or visible action. Brand colors ONLY for all graphics, text, and cards: red #E10A0A, ocean blue #00A8D8, and white. All on-screen text in Anton font, bold, uppercase. No dark green anywhere. Upbeat, energetic music throughout, building to the end. Tone: confident, fun. Use my uploaded real footage clips in this chat's media library for all B-roll wherever a clip fits (real Virgin Voyages ship and shore excursion shots). Only generate AI footage if no uploaded clip covers a scene.
+> GLOBAL STYLE: Cinematic, high-energy travel-ad pacing. Quick cuts, one to two seconds per B-roll shot. No dead air anywhere; every second has voiceover or visible action. Brand colors ONLY for all graphics, text, and cards: red #E10A0A, ocean blue #00A8D8, and white. All on-screen text in Bebas Neue font, bold, uppercase. No dark green anywhere. Upbeat, energetic music throughout, building to the end. Tone: confident, fun. Use my uploaded real footage clips in this chat's media library for all B-roll wherever a clip fits (real Virgin Voyages ship and shore excursion shots). Only generate AI footage if no uploaded clip covers a scene.
 >
 > SCENE 1 — Cold open, funny beat: the snorkel-gear guy strutting through the ship's elegant restaurant (reuse that exact scene). VO: "People think booking a cruise means being stuck on a ship. Wrong."
-> SCENE 2 — Fast B-roll montage from my uploads: Virgin red hull close-up, red deck at sunset, coastal port aerial. Title card, white Anton text on red #E10A0A: "A NEW PORT EVERY DAY". VO: "Virgin Voyages drops you in a new port almost every single day."
+> SCENE 2 — Fast B-roll montage from my uploads: Virgin red hull close-up, red deck at sunset, coastal port aerial. Title card, white Bebas Neue text on red #E10A0A: "A NEW PORT EVERY DAY". VO: "Virgin Voyages drops you in a new port almost every single day."
 > SCENE 3 — Fast B-roll montage from my uploads: zipline shots, icebergs, waterfall. VO: "And I book your shore adventures too: ziplines over the jungle, glacier hikes, snorkeling, beach clubs."
 > SCENE 4 — B-roll from my uploads: pool deck aerial, aerial show. VO: "Because the adventure follows you back on board."
 > SCENE 5 — A-roll: my avatar in the tropical shirt look. Overlay card in red #E10A0A and ocean blue #00A8D8 (no green anywhere): "AI DEAL SCANNING" and "SAME PRICE AS DIRECT", plus an agoravoy.com pill in red. VO: "You get the same price as booking direct, and my AI scans every deal so you never overpay. Get your free deal scan at agoravoy.com."
-> SCENE 6 — End card, three to four seconds: ocean blue #00A8D8 background, "AGORAVOY.COM" in white Anton inside a red #E10A0A box, tagline below: "BOOK VIRGIN. BOARD WITH FRIENDS." Music builds to a peak and ends clean.
+> SCENE 6 — End card, three to four seconds: ocean blue #00A8D8 background, "AGORAVOY.COM" in white Bebas Neue inside a red #E10A0A box, tagline below: "BOOK VIRGIN. BOARD WITH FRIENDS." Music builds to a peak and ends clean.
 
 Follow-up message pattern for mapping uploaded clips to scenes (send WITH files attached):
 

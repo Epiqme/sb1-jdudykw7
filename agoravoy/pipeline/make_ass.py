@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""SRT -> Anton word-pop ASS caption generator (Agoravoy video pipeline).
+"""SRT -> Bebas Neue word-pop ASS caption generator (Agoravoy video pipeline).
 
-Parses a HeyGen .srt, splits each segment into 2-3-word uppercase chunks
-evenly timed inside the segment, styles them as white Anton pops with brand-red
-(#E10A0A) keywords, and optionally adds a red-box title slam (e.g. "DEAL SCAN #1")
-at the top of the frame during the opening B-roll.
+Implements the caption spec in agoravoy/BRAND.md (style "B3"): 2-3-word
+uppercase chunks evenly timed inside each SRT segment, white Bebas Neue 104px
+with a heavy black outline (no box), brand-red (#E10A0A) keyword letters, and
+optionally a red-box title slam (e.g. "DEAL SCAN #1") at the top of the frame
+during the opening B-roll.
 
 Times in the output are ABSOLUTE (same clock as the SRT). When burning onto a
 cut segment, shift PTS first so they line up:
-  ffmpeg -i seg.mp4 -vf "setpts=PTS+<segStartSec>/TB,ass=captions.ass:fontsdir=<Anton dir>,setpts=PTS-STARTPTS" ...
+  ffmpeg -i seg.mp4 -vf "setpts=PTS+<segStartSec>/TB,ass=captions.ass:fontsdir=agoravoy/assets,setpts=PTS-STARTPTS" ...
 """
 import argparse
 import re
@@ -22,8 +23,8 @@ PlayResY: 1920
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Pop,Anton,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,1,0,1,7,3,2,60,120,500,1
-Style: Title,Anton,96,&H00FFFFFF,&H00FFFFFF,&H000A0AE1,&H000A0AE1,0,0,0,0,100,100,2,0,3,14,0,8,60,120,500,1
+Style: Pop,Bebas Neue,104,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,10,0,2,60,120,500,1
+Style: Title,Bebas Neue,96,&H00FFFFFF,&H00FFFFFF,&H000A0AE1,&H000A0AE1,0,0,0,0,100,100,2,0,3,14,0,8,60,120,500,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text

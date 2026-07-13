@@ -1,6 +1,8 @@
 # Video build recipe (video 5 method — current best practice)
 
-All commands assume: HeyGen avatar render `HEYGEN.mp4` (1080x1920, 25fps) + its `HEYGEN.srt`, raw clips in `~/Downloads`, Anton at `Assets/Anton-Regular.ttf`. Work at 25fps, count FRAMES not seconds (seconds drift audio sync).
+Brand spec (colors, font, caption style, end-card layout) lives in `../BRAND.md` — this file only holds the mechanics. Font: **Bebas Neue** at `agoravoy/assets/BebasNeue.ttf`.
+
+All commands assume: HeyGen avatar render `HEYGEN.mp4` (1080x1920, 25fps) + its `HEYGEN.srt`, raw clips in `~/Downloads`. Work at 25fps, count FRAMES not seconds (seconds drift audio sync).
 
 ## 0. Check every raw clip for HDR before grading
 
@@ -37,22 +39,23 @@ eq=contrast=1.03:saturation=1.05,noise=alls=6:allf=t
 - Trim: `-vf "fps=25,trim=end_frame=36,setpts=PTS-STARTPTS"` (or `start_frame:end_frame`).
 - Open on B-roll, not the avatar face (thumbnail + Epiq's rule). Avatar enters ~1.4s in: discard the first 36 avatar frames, keep its later frames at their ORIGINAL timeline positions so lips stay synced.
 
-## 3. Captions (Anton word-pops)
+## 3. Captions (Bebas Neue word-pops — BRAND.md style "B3")
 
 ```bash
 python3 make_ass.py --srt HEYGEN.srt --out build/captions.ass   # see --help for keyword/title options
 ```
 
-Parses SRT → 2-3-word uppercase chunks, evenly timed inside each SRT segment, Anton 84px white with black outline, keywords in red `&H0A0AE1&` (BGR of #E10A0A), bottom-center MarginV 500 (inside all platform safe zones), plus a "DEAL SCAN #N" red-box title slam (Title style, top-center). Burn per-segment with a PTS shift so absolute SRT times line up:
+Parses SRT → 2-3-word uppercase chunks, evenly timed inside each SRT segment, Bebas Neue 104px white with heavy black outline (10, no box), keywords in red letters `&H0A0AE1&` (BGR of #E10A0A), bottom-center MarginV 500 (inside all platform safe zones), plus a "DEAL SCAN #N" red-box title slam (Title style, top-center). Burn per-segment with a PTS shift so absolute SRT times line up:
 
 ```bash
-ffmpeg -i seg.mp4 -vf "setpts=PTS+<segStartSec>/TB,ass=captions.ass:fontsdir=<dir with Anton-Regular.ttf>,setpts=PTS-STARTPTS" ...
+ffmpeg -i seg.mp4 -vf "setpts=PTS+<segStartSec>/TB,ass=captions.ass:fontsdir=agoravoy/assets,setpts=PTS-STARTPTS" ...
 ```
 
-## 4. End card (3.2s)
+## 4. End card (3.2s — BRAND.md style "B: Clean")
 
 ```bash
-ffmpeg -f lavfi -i "color=c=0x00A8D8:s=1080x1920:r=25:d=3.2" -vf "drawtext=fontfile=Anton-Regular.ttf:text='AGORAVOY.COM':fontsize=104:fontcolor=white:box=1:boxcolor=0xE10A0A:boxborderw=42:x=(w-text_w)/2:y=820,drawtext=fontfile=Anton-Regular.ttf:text='BOOK VIRGIN. BOARD WITH FRIENDS.':fontsize=50:fontcolor=white:x=(w-text_w)/2:y=1090,drawtext=fontfile=Anton-Regular.ttf:text='DEAL SCAN \#1':fontsize=60:fontcolor=0xE10A0A:box=1:boxcolor=white:boxborderw=24:x=(w-text_w)/2:y=620,noise=alls=4:allf=t" ...
+FONT=agoravoy/assets/BebasNeue.ttf
+ffmpeg -f lavfi -i "color=c=0x00A8D8:s=1080x1920:r=25:d=3.2" -vf "drawtext=fontfile=$FONT:text='AGORAVOY.COM':fontsize=120:fontcolor=white:box=1:boxcolor=0xE10A0A:boxborderw=48:x=(w-text_w)/2:y=780,drawtext=fontfile=$FONT:text='BOOK VIRGIN.':fontsize=58:fontcolor=white:x=(w-text_w)/2:y=1110,drawtext=fontfile=$FONT:text='BOARD WITH FRIENDS.':fontsize=58:fontcolor=white:x=(w-text_w)/2:y=1195,noise=alls=4:allf=t" ...
 ```
 
 ## 5. Final assembly — THE RULE THAT MATTERS

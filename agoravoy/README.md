@@ -11,7 +11,7 @@ This directory is the versioned brain of the Agoravoy content machine, imported 
 - `VIDEO-QUALITY-PLAYBOOK.md` — 23 ranked quality findings; follow on every video
 - `pipeline/video-build-recipe.md` — exact ffmpeg recipe (video 5 method)
 - `pipeline/heygen-prompts.md` — both proven HeyGen prompts + gotchas
-- `pipeline/make_ass.py` — SRT → Anton word-pop ASS captions (now takes CLI args; `--help`)
+- `pipeline/make_ass.py` — SRT → Bebas Neue word-pop ASS captions per BRAND.md (CLI args; `--help`)
 
 ## What's NOT in this repo (and where it is)
 
@@ -25,4 +25,4 @@ This directory is the versioned brain of the Agoravoy content machine, imported 
 - **api.heygen.com IS reachable here** (real 401 from HeyGen without a key) — unlike the Cowork sandbox, direct HeyGen API automation works from Claude Code once `HEYGEN_API_KEY` is provided.
 - ffmpeg is not preinstalled but installs cleanly (`apt-get update && apt-get install -y ffmpeg`, v6.1.1). Long encodes are fine (10-min limit per command, background jobs supported) — no Cowork-style 45-180s kill.
 - `make_ass.py`, the end-card render, and ASS caption burning were all smoke-tested here and decode clean.
-- Anton-Regular.ttf is not here yet — tests used DejaVu. Add the real font (or fetch Anton from Google Fonts) before producing deliverables.
+- Brand fonts live in `assets/` (BebasNeue.ttf = current brand font per BRAND.md; Anton-Regular.ttf = retired legacy).
