@@ -51,12 +51,15 @@ Parses SRT → 2-3-word uppercase chunks, evenly timed inside each SRT segment, 
 ffmpeg -i seg.mp4 -vf "setpts=PTS+<segStartSec>/TB,ass=captions.ass:fontsdir=agoravoy/assets,setpts=PTS-STARTPTS" ...
 ```
 
-## 4. End card (3.2s — BRAND.md style "E3: red letters", no boxes)
+## 4. End card (3.2s — BRAND.md "FINAL" spec, generated, never hand-built)
 
 ```bash
-FONT=agoravoy/assets/BebasNeue.ttf
-ffmpeg -f lavfi -i "color=c=0x00A8D8:s=1080x1920:r=25:d=3.2" -vf "drawtext=fontfile=$FONT:text='AGORAVOY.COM':fontsize=150:fontcolor=0xE10A0A:borderw=6:bordercolor=white:x=(w-text_w)/2:y=800,drawtext=fontfile=$FONT:text='BOOK VIRGIN.':fontsize=58:fontcolor=white:x=(w-text_w)/2:y=1130,drawtext=fontfile=$FONT:text='BOARD WITH FRIENDS.':fontsize=58:fontcolor=white:x=(w-text_w)/2:y=1215,noise=alls=4:allf=t" ...
+python3 make_endcard.py --out build/endcard.png
+ffmpeg -loop 1 -i build/endcard.png -t 3.2 -r 25 -vf "noise=alls=4:allf=t" \
+       -c:v libx264 -pix_fmt yuv420p build/endcard.mp4
 ```
+
+(White card: AGORA ocean / VOY red Anton wordmark, red lowercase agoravoy.com justified beneath, navy taglines.)
 
 ## 5. Final assembly — THE RULE THAT MATTERS
 

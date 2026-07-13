@@ -21,7 +21,7 @@ Submitted 7/13 to chat "Create Agoravoy Video"; plan artifact "Agoravoy: Real Ad
 > SCENE 3 — Fast B-roll montage from my uploads: zipline shots, icebergs, waterfall. VO: "And I book your shore adventures too: ziplines over the jungle, glacier hikes, snorkeling, beach clubs."
 > SCENE 4 — B-roll from my uploads: pool deck aerial, aerial show. VO: "Because the adventure follows you back on board."
 > SCENE 5 — A-roll: my avatar in the tropical shirt look. Overlay card in red #E10A0A and ocean blue #00A8D8 (no green anywhere): "AI DEAL SCANNING" and "SAME PRICE AS DIRECT", plus agoravoy.com in red #E10A0A Bebas Neue letters with a thin white edge, no box. VO: "You get the same price as booking direct, and my AI scans every deal so you never overpay. Get your free deal scan at agoravoy.com."
-> SCENE 6 — End card, three to four seconds: ocean blue #00A8D8 background, "AGORAVOY.COM" huge in red #E10A0A Bebas Neue letters with a thin white edge (NO box), tagline below: "BOOK VIRGIN. BOARD WITH FRIENDS." Music builds to a peak and ends clean.
+> SCENE 6 — End card, three to four seconds: WHITE background. "AGORAVOY" huge in Anton font, upright, wide letter spacing — AGORA in ocean blue #00A8D8, VOY in red #E10A0A. Directly beneath it, "agoravoy.com" small, in red lowercase, stretched to the same width as the wordmark. Below that, taglines in dark navy #083D5C: "BOOK VIRGIN. BOARD WITH FRIENDS." No boxes, no shadows. Music builds to a peak and ends clean. (Better: leave the end card out of the HeyGen render entirely — we append our generated one in post.)
 
 Follow-up message pattern for mapping uploaded clips to scenes (send WITH files attached):
 
