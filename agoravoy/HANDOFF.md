@@ -50,7 +50,7 @@ Full commands in `pipeline/video-build-recipe.md`. Summary:
 6. **CRITICAL: deliver ONE continuous encode.** `ffmpeg -f concat -i list.txt -c:v libx264 ...` re-encode. NEVER ship a `-c copy` concat of separately-encoded pieces — probes clean but QuickTime freezes at seams and decode drops frames (killed video 5 v1 and v2).
 7. Export: 1080x1920 H.264 12M, AAC 256k 48kHz, -14 LUFS loudnorm, +faststart. Master to `Videos/` named `YYYY-MM-DD-videoN-<slug>-vN.mp4`.
 
-Brand: red #E10A0A, ocean blue #00A8D8, white; font Bebas Neue (`agoravoy/assets/BebasNeue.ttf` — replaced Anton 7/13, see BRAND.md); tagline "BOOK VIRGIN. BOARD WITH FRIENDS."; end card = white AGORAVOY.COM in red box on ocean blue.
+Brand: red #E10A0A, ocean blue #00A8D8, white; font Bebas Neue (`agoravoy/assets/BebasNeue.ttf` — replaced Anton 7/13, see BRAND.md); tagline "BOOK VIRGIN. BOARD WITH FRIENDS."; end card = AGORAVOY.COM in red letters (no box) on ocean blue — see BRAND.md.
 
 Raw footage: ~195 UUID-named clips in ~/Downloads (real Virgin ship + excursion footage, all SDR bt709). Best-clip IDs with timestamps are logged in STATUS.md ("TOP ACTION CLIPS FOUND"). 10 pre-trimmed/graded picks in `Assets/video4-real-clips/`.
 
