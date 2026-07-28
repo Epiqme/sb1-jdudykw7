@@ -7,6 +7,7 @@ import Animated, {
   withTiming,
   withRepeat,
   Easing,
+  type SharedValue,
 } from "react-native-reanimated";
 
 // Cinematic "drone flyover" hero: cross-fades between aerial shots with a slow
@@ -20,7 +21,7 @@ function Layer({
 }: {
   uri: string;
   index: number;
-  active: Animated.SharedValue<number>;
+  active: SharedValue<number>;
   direction: number;
 }) {
   const kb = useSharedValue(0);
