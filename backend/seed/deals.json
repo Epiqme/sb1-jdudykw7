@@ -1,0 +1,65 @@
+[
+  {
+    "id": "8f84467e-f2f5-4c84-94b3-870581b72b17",
+    "title": "Summer Caribbean Escape",
+    "ship": "Scarlet Lady",
+    "region": "Caribbean",
+    "nights": 5,
+    "base_price": 1450.0,
+    "deal_price": 1150.0,
+    "perks": [
+      "$300 Sailor Loot",
+      "Free WiFi",
+      "Premium Bar Tab"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "tag": "Best Value"
+  },
+  {
+    "id": "a1bbe2d2-a20b-4161-9a87-ce4cc7109342",
+    "title": "Mediterranean Nights",
+    "ship": "Valiant Lady",
+    "region": "Mediterranean",
+    "nights": 8,
+    "base_price": 2600.0,
+    "deal_price": 2150.0,
+    "perks": [
+      "$600 Bar Tab",
+      "Free Gratuities",
+      "Cabin Upgrade"
+    ],
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=srgb&fm=jpg&q=80&w=900",
+    "tag": "Hot Deal"
+  },
+  {
+    "id": "f6090da9-9df7-4623-ab7c-19c93da2b58d",
+    "title": "Quick Weekend Getaway",
+    "ship": "Resilient Lady",
+    "region": "Caribbean",
+    "nights": 4,
+    "base_price": 999.0,
+    "deal_price": 799.0,
+    "perks": [
+      "$200 Sailor Loot",
+      "Free WiFi"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/qs45rx0l_bimini-03.webp",
+    "tag": "Flash Sale"
+  },
+  {
+    "id": "c1ed08c7-5910-4f1a-82f7-79aef0bcaee0",
+    "title": "Mexican Riviera Sunset",
+    "ship": "Brilliant Lady",
+    "region": "Mexican Riviera",
+    "nights": 5,
+    "base_price": 1600.0,
+    "deal_price": 1299.0,
+    "perks": [
+      "$300 Bar Tab",
+      "Spa Credit",
+      "Free Gratuities"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/iv9hskml_bimini-05.jpeg",
+    "tag": "New"
+  }
+]

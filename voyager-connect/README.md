@@ -30,11 +30,14 @@ cp .env.example .env   # set EXPO_PUBLIC_BACKEND_URL to your backend
 npx expo start         # then press w for web, or scan the QR in Expo Go
 ```
 
-## Important: the backend is NOT in this repo
+## The backend
 
-Only the frontend could be recovered from the browser bundle. The app expects
-a backend (currently the Emergent preview URL) exposing these routes under
-`/api`:
+A reconstructed, self-owned backend now lives in `../backend` (a FastAPI
+service seeded with the real cruises/deals/profiles data). Point this app at it
+by setting `EXPO_PUBLIC_BACKEND_URL=http://localhost:8001` in `.env`. See
+`backend/README.md` for the full story on what could and couldn't be recovered.
+
+The app expects these routes under `/api`:
 
 - `GET /cruises`, `GET /cruises/:id`, cruise members and messages
 - `POST /profiles`, `GET/PUT /profiles/:id`, `POST /profiles/:id/wave`
