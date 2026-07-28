@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Voyager Connect",
+    "slug": "voyager-connect",
+    "version": "1.0.0",
+    "scheme": "voyagerconnect",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "bundleIdentifier": "com.epiqme.voyagerconnect",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Voyager Connect needs access to your photos so you can set a profile photo, cover image, and share pictures in chat."
+      }
+    },
+    "android": {
+      "package": "com.epiqme.voyagerconnect",
+      "permissions": ["READ_MEDIA_IMAGES"]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-splash-screen",
+      "expo-secure-store",
+      "expo-web-browser",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Voyager Connect needs access to your photos so you can set a profile photo, cover image, and share pictures in chat."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
