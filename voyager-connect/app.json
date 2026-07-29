@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Voyager Connect",
+    "name": "Icebreaker Elite",
     "slug": "voyager-connect",
     "version": "1.0.0",
     "scheme": "voyagerconnect",
@@ -11,12 +11,14 @@
       "bundleIdentifier": "com.epiqme.voyagerconnect",
       "supportsTablet": false,
       "infoPlist": {
-        "NSPhotoLibraryUsageDescription": "Voyager Connect needs access to your photos so you can set a profile photo, cover image, and share pictures in chat."
+        "NSPhotoLibraryUsageDescription": "Icebreaker Elite needs access to your photos so you can set a profile photo, cover image, and share pictures in chat."
       }
     },
     "android": {
       "package": "com.epiqme.voyagerconnect",
-      "permissions": ["READ_MEDIA_IMAGES"]
+      "permissions": [
+        "READ_MEDIA_IMAGES"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -30,7 +32,7 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Voyager Connect needs access to your photos so you can set a profile photo, cover image, and share pictures in chat."
+          "photosPermission": "Icebreaker Elite needs access to your photos so you can set a profile photo, cover image, and share pictures in chat."
         }
       ]
     ],
