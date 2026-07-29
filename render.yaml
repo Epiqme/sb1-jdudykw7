@@ -1,5 +1,8 @@
 # Root blueprint so Render's one-click "Deploy" button auto-configures the
 # Icebreaker backend from this repo. (Mirrors backend/render.yaml.)
+# NOTE: free plan has no persistent disk, so data is in-container (resets on
+# restart). Fine for testing; add a disk (paid) or a database before real
+# customers rely on saved unlocks.
 services:
   - type: web
     name: icebreaker-backend
@@ -12,11 +15,5 @@ services:
         sync: false          # you set this in the Render dialog
       - key: STRIPE_SECRET_KEY
         sync: false          # paste your fresh Stripe key in the Render dialog
-      - key: DATA_DIR
-        value: /data
       - key: SAVINGS_RATE
         value: "0.12"
-    disk:
-      name: icebreaker-data
-      mountPath: /data
-      sizeGB: 1
