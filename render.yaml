@@ -1,0 +1,22 @@
+# Root blueprint so Render's one-click "Deploy" button auto-configures the
+# Icebreaker backend from this repo. (Mirrors backend/render.yaml.)
+services:
+  - type: web
+    name: icebreaker-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: ADMIN_PIN
+        sync: false          # you set this in the Render dialog
+      - key: STRIPE_SECRET_KEY
+        sync: false          # paste your fresh Stripe key in the Render dialog
+      - key: DATA_DIR
+        value: /data
+      - key: SAVINGS_RATE
+        value: "0.12"
+    disk:
+      name: icebreaker-data
+      mountPath: /data
+      sizeGB: 1
