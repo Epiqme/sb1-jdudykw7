@@ -39,7 +39,8 @@
       ]
     ],
     "experiments": {
-      "typedRoutes": false
+      "typedRoutes": false,
+      "baseUrl": "/sb1-jdudykw7"
     }
   }
 }
