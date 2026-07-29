@@ -31,6 +31,23 @@ import store
 ADMIN_PIN = os.environ.get("ADMIN_PIN", "0000")
 ELITE_PRICE_USD = float(os.environ.get("ELITE_PRICE_USD", "59"))
 
+# Stripe (web payments). When STRIPE_SECRET_KEY is set we take real payments;
+# without it, the checkout endpoints fall back to a dev stub that auto-approves
+# so the app can be exercised locally.
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
+try:
+    import stripe  # type: ignore
+    if STRIPE_SECRET_KEY:
+        stripe.api_key = STRIPE_SECRET_KEY
+except Exception:  # pragma: no cover - stripe optional at import time
+    stripe = None  # type: ignore
+
+STRIPE_ENABLED = bool(STRIPE_SECRET_KEY) and stripe is not None
+
+# Apple in-app purchase (App Store path). Set APPLE_SHARED_SECRET to verify
+# receipts against Apple; without it, the endpoint falls back to a dev stub.
+APPLE_SHARED_SECRET = os.environ.get("APPLE_SHARED_SECRET", "")
+
 app = FastAPI(title="Voyager Connect API", version="1.0.0")
 
 app.add_middleware(
@@ -478,12 +495,38 @@ def elite_status(profile_id: str) -> dict:
 
 @app.post("/api/checkout/create-session")
 def create_checkout(body: CheckoutIn) -> dict:
-    """Create a payment session.
+    """Create a Stripe Checkout session for the Elite unlock (web path).
 
-    STUB: if STRIPE_SECRET_KEY is set you should replace this with a real
-    Stripe Checkout session. Without it, we create a local pending session the
-    app can 'verify' to simulate a completed purchase in development.
+    With STRIPE_SECRET_KEY set, this creates a real Stripe Checkout session and
+    returns Stripe's hosted payment URL. Without it, it falls back to a local
+    pending session the app can 'verify' to simulate a purchase in development.
     """
+    if STRIPE_ENABLED:
+        session = stripe.checkout.Session.create(
+            mode="payment",
+            line_items=[{
+                "price_data": {
+                    "currency": "usd",
+                    "product_data": {"name": "Icebreaker Elite"},
+                    "unit_amount": int(round(ELITE_PRICE_USD * 100)),
+                },
+                "quantity": 1,
+            }],
+            success_url=f"{body.origin}?session_id={{CHECKOUT_SESSION_ID}}",
+            cancel_url=f"{body.origin}?canceled=1",
+            metadata={"profile_id": body.profile_id, "cruise_id": body.cruise_id},
+        )
+        store.insert("elite_unlocks", {
+            "id": new_id(),
+            "profile_id": body.profile_id,
+            "cruise_id": body.cruise_id,
+            "method": "pending",
+            "session_id": session.id,
+            "created_at": now_iso(),
+        })
+        return {"id": session.id, "url": session.url}
+
+    # Dev fallback (no Stripe key configured).
     session_id = new_id()
     store.insert("elite_unlocks", {
         "id": new_id(),
@@ -493,9 +536,7 @@ def create_checkout(body: CheckoutIn) -> dict:
         "session_id": session_id,
         "created_at": now_iso(),
     })
-    # Redirect back into the app; a real Stripe URL would go here.
-    url = f"{body.origin}?session_id={session_id}"
-    return {"id": session_id, "url": url}
+    return {"id": session_id, "url": f"{body.origin}?session_id={session_id}"}
 
 
 @app.post("/api/checkout/verify")
@@ -503,23 +544,57 @@ def verify_checkout(body: VerifyCheckoutIn) -> dict:
     pending = store.find_one("elite_unlocks", session_id=body.session_id)
     if not pending:
         return {"unlocked": False, "payment_status": "not_found"}
-    # STUB: assume payment succeeded. Replace with Stripe session lookup.
-    store.update_one(
-        "elite_unlocks",
-        {"session_id": body.session_id},
-        {"method": "paid"},
-    )
+
+    if STRIPE_ENABLED:
+        session = stripe.checkout.Session.retrieve(body.session_id)
+        if session.payment_status == "paid":
+            store.update_one("elite_unlocks", {"session_id": body.session_id}, {"method": "paid"})
+            return {"unlocked": True, "payment_status": "paid"}
+        return {"unlocked": False, "payment_status": session.payment_status}
+
+    # Dev fallback: assume paid.
+    store.update_one("elite_unlocks", {"session_id": body.session_id}, {"method": "paid"})
     return {"unlocked": True, "payment_status": "paid"}
+
+
+def _verify_apple_receipt(receipt: str) -> bool:
+    """Validate an App Store receipt via Apple's verifyReceipt endpoint.
+
+    Tries production first, then falls back to sandbox on status 21007 (the
+    documented flow). Returns True only when Apple reports status 0.
+    """
+    import json as _json
+    import urllib.request
+
+    def call(url: str) -> dict:
+        payload = _json.dumps({
+            "receipt-data": receipt,
+            "password": APPLE_SHARED_SECRET,
+            "exclude-old-transactions": True,
+        }).encode()
+        req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return _json.loads(resp.read().decode())
+
+    try:
+        result = call("https://buy.itunes.apple.com/verifyReceipt")
+        if result.get("status") == 21007:
+            result = call("https://sandbox.itunes.apple.com/verifyReceipt")
+        return result.get("status") == 0
+    except Exception:
+        return False
 
 
 @app.post("/api/iap/apple/verify")
 def apple_verify(body: AppleVerifyIn) -> dict:
-    """Verify an Apple in-app purchase.
+    """Verify an Apple in-app purchase (App Store path).
 
-    STUB: accepts the purchase and unlocks. Before production, validate
-    `purchase_token` against Apple's App Store Server API (or verifyReceipt)
-    and confirm the product id / transaction before granting access.
+    With APPLE_SHARED_SECRET set, the receipt in `purchase_token` is validated
+    against Apple before unlocking. Without it, falls back to a dev stub.
     """
+    if APPLE_SHARED_SECRET:
+        if not _verify_apple_receipt(body.purchase_token):
+            raise HTTPException(status_code=400, detail="Could not verify App Store purchase.")
     _grant_unlock(body.profile_id, body.cruise_id, method="paid")
     return {"unlocked": True, "cruise_id": body.cruise_id, "transaction_id": new_id()}
 

@@ -6,6 +6,7 @@
     "scheme": "voyagerconnect",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
     "newArchEnabled": true,
     "ios": {
       "bundleIdentifier": "com.epiqme.voyagerconnect",
@@ -22,7 +23,8 @@
     },
     "web": {
       "bundler": "metro",
-      "output": "single"
+      "output": "single",
+      "favicon": "./assets/icon.png"
     },
     "plugins": [
       "expo-router",
