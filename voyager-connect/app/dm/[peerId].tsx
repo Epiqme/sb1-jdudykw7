@@ -83,7 +83,7 @@ export default function DirectMessage() {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.surface }}>
+    <View style={{ flex: 1, backgroundColor: colors.surface, overflow: "hidden" }}>
       <View style={[styles.header, { paddingTop: insets.top + spacing.sm }]}>
         <GlassFill overlay={glass.overlayStrong} />
         <Pressable testID="dm-back" onPress={() => router.back()} hitSlop={12}>
@@ -106,7 +106,8 @@ export default function DirectMessage() {
         ) : (
           <ScrollView
             ref={scrollRef}
-            contentContainerStyle={{ padding: spacing.lg, gap: spacing.md }}
+            style={{ flex: 1 }}
+            contentContainerStyle={{ padding: spacing.lg, gap: spacing.md, width: "100%" }}
             showsVerticalScrollIndicator={false}
           >
             {messages.length === 0 && (
@@ -116,12 +117,10 @@ export default function DirectMessage() {
               const mine = m.from_id === profile?.id;
               const isLastMine = mine && m.id === lastMineId;
               return (
-                <View key={m.id} style={[styles.wrap, mine && { alignSelf: "flex-end", alignItems: "flex-end" }]}>
-                  <View style={[styles.row, mine && styles.rowMine]}>
-                    <View style={[styles.bubble, mine ? styles.bubbleMine : styles.bubbleOther]}>
-                      {!!m.image && <Image source={{ uri: m.image }} style={styles.msgImage} contentFit="cover" transition={150} />}
-                      {!!m.text && <Text style={[styles.msgText, mine && { color: colors.onBrand }]}>{m.text}</Text>}
-                    </View>
+                <View key={m.id} style={[styles.wrap, { alignItems: mine ? "flex-end" : "flex-start" }]}>
+                  <View style={[styles.bubble, mine ? styles.bubbleMine : styles.bubbleOther]}>
+                    {!!m.image && <Image source={{ uri: m.image }} style={styles.msgImage} contentFit="cover" transition={150} />}
+                    {!!m.text && <Text style={[styles.msgText, mine && { color: colors.onBrand }]}>{m.text}</Text>}
                   </View>
                   {isLastMine && (
                     <Text style={styles.status}>{m.read ? "Seen" : "Sent"}</Text>
@@ -170,16 +169,14 @@ const styles = StyleSheet.create({
   headerTitle: { fontSize: font.lg, fontWeight: "500", color: colors.onSurface },
   headerSub: { fontSize: font.sm, color: colors.muted },
   emptyChat: { textAlign: "center", color: colors.muted, marginTop: spacing["2xl"], fontSize: font.base },
-  wrap: { maxWidth: "82%", gap: 2 },
-  status: { fontSize: font.sm, color: colors.muted, marginRight: spacing.xs },
-  row: { flexDirection: "row", alignItems: "flex-end", gap: spacing.sm, maxWidth: "82%" },
-  rowMine: { alignSelf: "flex-end" },
-  bubble: { paddingHorizontal: spacing.md, paddingVertical: spacing.sm, borderRadius: radius.md },
+  wrap: { width: "100%", gap: 2 },
+  status: { fontSize: font.sm, color: colors.muted, marginHorizontal: spacing.xs },
+  bubble: { maxWidth: "82%", flexShrink: 1, paddingHorizontal: spacing.md, paddingVertical: spacing.sm, borderRadius: radius.md },
   bubbleOther: { backgroundColor: colors.surfaceSecondary, borderBottomLeftRadius: 4 },
   bubbleMine: { backgroundColor: colors.brand, borderBottomRightRadius: 4 },
   msgText: { fontSize: font.base, color: colors.onSurface, lineHeight: 20 },
   msgImage: { width: 200, height: 200, borderRadius: radius.sm, marginBottom: 2 },
-  attachBtn: { width: 40, height: 44, alignItems: "center", justifyContent: "center" },
+  attachBtn: { width: 40, height: 44, alignItems: "center", justifyContent: "center", position: "relative", zIndex: 1 },
   inputBar: {
     flexDirection: "row",
     alignItems: "flex-end",
@@ -200,6 +197,8 @@ const styles = StyleSheet.create({
     fontSize: font.base,
     color: colors.onSurface,
     maxHeight: 100,
+    position: "relative",
+    zIndex: 1,
   },
-  sendBtn: { width: 44, height: 44, borderRadius: radius.pill, backgroundColor: colors.brand, alignItems: "center", justifyContent: "center" },
+  sendBtn: { width: 44, height: 44, borderRadius: radius.pill, backgroundColor: colors.brand, alignItems: "center", justifyContent: "center", position: "relative", zIndex: 1 },
 });

@@ -114,7 +114,8 @@ export default function Chat() {
         ) : (
           <ScrollView
             ref={scrollRef}
-            contentContainerStyle={{ padding: spacing.lg, gap: spacing.md }}
+            style={{ flex: 1 }}
+            contentContainerStyle={{ padding: spacing.lg, gap: spacing.md, width: "100%" }}
             showsVerticalScrollIndicator={false}
           >
             {messages.length === 0 && (
@@ -176,15 +177,15 @@ const styles = StyleSheet.create({
   eliteBanner: { flexDirection: "row", alignItems: "center", gap: spacing.sm, backgroundColor: colors.brand, paddingHorizontal: spacing.lg, paddingVertical: spacing.md },
   eliteBannerText: { flex: 1, color: colors.onBrand, fontSize: font.base, fontWeight: "600" },
   emptyChat: { textAlign: "center", color: colors.muted, marginTop: spacing["2xl"], fontSize: font.base },
-  row: { flexDirection: "row", alignItems: "flex-end", gap: spacing.sm, maxWidth: "82%" },
-  rowMine: { alignSelf: "flex-end", flexDirection: "row-reverse" },
-  bubble: { paddingHorizontal: spacing.md, paddingVertical: spacing.sm, borderRadius: radius.md },
+  row: { flexDirection: "row", alignItems: "flex-end", gap: spacing.sm, width: "100%" },
+  rowMine: { justifyContent: "flex-end", flexDirection: "row-reverse" },
+  bubble: { maxWidth: "82%", flexShrink: 1, paddingHorizontal: spacing.md, paddingVertical: spacing.sm, borderRadius: radius.md },
   bubbleOther: { backgroundColor: colors.surfaceSecondary, borderBottomLeftRadius: 4 },
   bubbleMine: { backgroundColor: colors.brand, borderBottomRightRadius: 4 },
   msgName: { fontSize: font.sm, color: colors.brand, fontWeight: "500", marginBottom: 2 },
   msgText: { fontSize: font.base, color: colors.onSurface, lineHeight: 20 },
   msgImage: { width: 200, height: 200, borderRadius: radius.sm, marginBottom: 2 },
-  attachBtn: { width: 40, height: 44, alignItems: "center", justifyContent: "center" },
+  attachBtn: { width: 40, height: 44, alignItems: "center", justifyContent: "center", position: "relative", zIndex: 1 },
   inputBar: {
     flexDirection: "row",
     alignItems: "flex-end",
@@ -205,6 +206,8 @@ const styles = StyleSheet.create({
     fontSize: font.base,
     color: colors.onSurface,
     maxHeight: 100,
+    position: "relative",
+    zIndex: 1,
   },
-  sendBtn: { width: 44, height: 44, borderRadius: radius.pill, backgroundColor: colors.brand, alignItems: "center", justifyContent: "center" },
+  sendBtn: { width: 44, height: 44, borderRadius: radius.pill, backgroundColor: colors.brand, alignItems: "center", justifyContent: "center", position: "relative", zIndex: 1 },
 });
