@@ -152,6 +152,7 @@ export const api = {
 };
 
 export const BACKEND_URL = BASE;
+export const APP_URL = process.env.EXPO_PUBLIC_APP_URL || BASE;
 
 export const STORAGE_KEYS = {
   profileId: "icebreaker_profile_id",

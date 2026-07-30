@@ -1,7 +1,7 @@
 import { Share } from "react-native";
 import { Cruise } from "@/src/api";
 
-const BASE = process.env.EXPO_PUBLIC_BACKEND_URL;
+const BASE = process.env.EXPO_PUBLIC_APP_URL || process.env.EXPO_PUBLIC_BACKEND_URL;
 
 function fmt(iso: string) {
   return new Date(iso + "T00:00:00").toLocaleDateString("en-US", {

@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Pressable, Modal, Share, Platform } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import QRCode from "react-native-qrcode-svg";
-import { Cruise, BACKEND_URL } from "@/src/api";
+import { Cruise, APP_URL } from "@/src/api";
 import { shareInvite } from "@/src/invite";
 import { GlassFill } from "@/src/components/GlassFill";
 import { colors, spacing, radius, font, glass } from "@/src/theme";
@@ -18,7 +18,7 @@ export function ShareAppModal({
   cruise: Cruise | null;
   name?: string;
 }) {
-  const link = cruise ? `${BACKEND_URL}/join/${cruise.id}` : `${BACKEND_URL}/`;
+  const link = cruise ? `${APP_URL}/join/${cruise.id}` : `${APP_URL}/`;
   const shortLink = link.replace(/^https?:\/\//, "");
 
   const doShare = async () => {
