@@ -1,0 +1,23 @@
+# One-click deploy config for Render (render.com — free tier).
+# In Render: New + → Blueprint → connect this repo → it reads this file.
+services:
+  - type: web
+    name: icebreaker-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: ADMIN_PIN
+        sync: false          # set your own PIN in the Render dashboard
+      - key: DATA_DIR
+        value: /data
+      - key: SAVINGS_RATE
+        value: "0.12"
+      # Add STRIPE_SECRET_KEY in the dashboard once you've rolled a fresh key.
+      # - key: STRIPE_SECRET_KEY
+      #   sync: false
+    disk:
+      name: icebreaker-data
+      mountPath: /data
+      sizeGB: 1

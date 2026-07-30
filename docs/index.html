@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Icebreaker Elite</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <link rel="icon" href="/sb1-jdudykw7/favicon.ico" /><link rel="manifest" href="/sb1-jdudykw7/manifest.json"/><link rel="apple-touch-icon" sizes="192x192" href="/sb1-jdudykw7/icon-192.png"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-title" content="Icebreaker Elite"/><meta name="theme-color" content="#e0433d"/></head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  <script src="/sb1-jdudykw7/_expo/static/js/web/entry-150b9e0d746b0680c2124bc53fd2023b.js" defer></script>
+
+<style>
+#ib-install{position:fixed;left:12px;right:12px;bottom:14px;z-index:99999;background:#16161c;color:#fff;border:1px solid #333;border-radius:16px;padding:14px 16px;display:none;align-items:center;gap:12px;font-family:-apple-system,system-ui,sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+#ib-install img{width:44px;height:44px;border-radius:10px}
+#ib-install .t{flex:1;font-size:14px;line-height:1.35}
+#ib-install b{font-size:15px}
+#ib-install button{background:#e0433d;color:#fff;border:0;border-radius:10px;padding:10px 16px;font-size:14px;font-weight:600}
+#ib-install .x{background:none;color:#888;padding:6px;font-size:18px}
+</style>
+<div id="ib-install">
+  <img src="/sb1-jdudykw7/icon-192.png" alt="">
+  <div class="t"><b>Get the Icebreaker Elite app</b><br><span id="ib-msg"></span></div>
+  <button id="ib-go">Install</button>
+  <button class="x" id="ib-x">&times;</button>
+</div>
+<script>
+(function(){
+  var standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  if (standalone || localStorage.getItem('ib-install-dismissed')) return;
+  var bar=document.getElementById('ib-install'), msg=document.getElementById('ib-msg'), go=document.getElementById('ib-go');
+  var deferred=null;
+  var isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent);
+  function show(){bar.style.display='flex';}
+  if(isIOS){
+    msg.innerHTML='Tap the Share button below, then "Add to Home Screen"';
+    go.style.display='none';
+    setTimeout(show, 1500);
+  } else {
+    window.addEventListener('beforeinstallprompt', function(e){
+      e.preventDefault(); deferred=e;
+      msg.textContent='Add it to your phone like a real app';
+      setTimeout(show, 1200);
+    });
+  }
+  go.addEventListener('click', function(){ if(deferred){deferred.prompt();} bar.style.display='none'; });
+  document.getElementById('ib-x').addEventListener('click', function(){ localStorage.setItem('ib-install-dismissed','1'); bar.style.display='none'; });
+})();
+</script>
+</body>
+</html>

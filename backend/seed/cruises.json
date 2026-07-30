@@ -1,0 +1,874 @@
+[
+  {
+    "id": "06fd5b98-4440-420a-9240-f3e661a2a041",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-07-25",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "bc3d3205-3d48-4e8f-9706-6426ac5673e9",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-07-26",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "Aruba",
+      "Curacao",
+      "St. Lucia",
+      "Antigua",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "402f3c41-316b-4fe7-b410-c2ff30255342",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-07-28",
+    "nights": 5,
+    "itinerary": [
+      "Los Angeles",
+      "Catalina Island",
+      "Ensenada",
+      "San Diego",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "71a1103c-d667-496d-8890-1983682e79b1",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-07-30",
+    "nights": 6,
+    "itinerary": [
+      "Miami",
+      "Amber Cove",
+      "San Juan",
+      "Grand Turk",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "0622cc51-6e17-4880-a3fe-dd6dba3c3cf0",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-08-01",
+    "nights": 5,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Key West",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "6d83d75a-d4c2-477e-8414-48a7b3a03eb6",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-08-02",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "St. Maarten",
+      "Barbados",
+      "Tortola",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "d88f439f-a0db-4aed-bb98-9ea09d923b13",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-08-04",
+    "nights": 4,
+    "itinerary": [
+      "Los Angeles",
+      "Ensenada",
+      "Catalina Island",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "48ea4713-d6f1-4bb4-8008-7570080c0b7d",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-08-06",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Puerto Plata",
+      "Bimini",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "54acd60c-5b6a-4cbd-80df-cf4c9383b1c6",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-08-08",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "40dcb639-ff08-4025-8aa1-a07ef4dfcfa7",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-08-09",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "Aruba",
+      "Curacao",
+      "St. Lucia",
+      "Antigua",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "a915bf1a-707a-4201-86e6-547d2664f9c0",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-08-11",
+    "nights": 5,
+    "itinerary": [
+      "Los Angeles",
+      "Catalina Island",
+      "Ensenada",
+      "San Diego",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "9831895d-f33a-4d7b-a9e5-70b24ed23406",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-08-13",
+    "nights": 6,
+    "itinerary": [
+      "Miami",
+      "Amber Cove",
+      "San Juan",
+      "Grand Turk",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "b70ebf64-452a-4781-8529-2a2b486a6617",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-08-15",
+    "nights": 5,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Key West",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "09766150-c51b-4bd3-bdad-9e5bd2047e6c",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-08-16",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "St. Maarten",
+      "Barbados",
+      "Tortola",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "784a232d-c84a-478c-a451-7d1003f9a28f",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-08-18",
+    "nights": 4,
+    "itinerary": [
+      "Los Angeles",
+      "Ensenada",
+      "Catalina Island",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "549ac69e-e982-4bb2-b4bf-2d08be9d4055",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-08-20",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Puerto Plata",
+      "Bimini",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "730b0445-c82b-491b-94be-52a66a74baea",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-08-22",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "54e3d9a1-9da2-4c05-9ba7-4d5c4f5102ab",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-08-23",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "Aruba",
+      "Curacao",
+      "St. Lucia",
+      "Antigua",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "a9ddbff6-96c9-42ca-8ce9-e95833e93cd5",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-08-25",
+    "nights": 5,
+    "itinerary": [
+      "Los Angeles",
+      "Catalina Island",
+      "Ensenada",
+      "San Diego",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "c9b0dd6f-d26d-46a5-8cb7-fa793fd41c49",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-08-27",
+    "nights": 6,
+    "itinerary": [
+      "Miami",
+      "Amber Cove",
+      "San Juan",
+      "Grand Turk",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "01aaa8c3-5229-491f-9a4d-d81f61e3504e",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-08-29",
+    "nights": 5,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Key West",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "fe7fcf2f-5a61-481d-8294-d50f20693bed",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-08-30",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "St. Maarten",
+      "Barbados",
+      "Tortola",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "805fa5dd-13c9-48da-9f6c-a754f89c3d6a",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-09-01",
+    "nights": 4,
+    "itinerary": [
+      "Los Angeles",
+      "Ensenada",
+      "Catalina Island",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "3ff2d369-206f-46f3-a836-a5dc7ace8eee",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-09-03",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Puerto Plata",
+      "Bimini",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "aa29a1ae-5933-4701-bb43-f06846e82658",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-09-05",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "29a26a59-df2b-4937-b52f-dacc27b2f490",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-09-06",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "Aruba",
+      "Curacao",
+      "St. Lucia",
+      "Antigua",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "1eb209ea-dd81-436e-a03b-6a24964809b2",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-09-08",
+    "nights": 5,
+    "itinerary": [
+      "Los Angeles",
+      "Catalina Island",
+      "Ensenada",
+      "San Diego",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "6dc42cf8-7cdd-4ab7-8c88-668ca182cda2",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-09-10",
+    "nights": 6,
+    "itinerary": [
+      "Miami",
+      "Amber Cove",
+      "San Juan",
+      "Grand Turk",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "9db2684a-5ed4-48b1-8292-e986f3b66c5c",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-09-12",
+    "nights": 5,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Key West",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "f0522592-d65e-4e65-9956-92f16f415b2a",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-09-13",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "St. Maarten",
+      "Barbados",
+      "Tortola",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "70d8a6d4-73b2-48cb-afea-b17afa1832a6",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-09-15",
+    "nights": 4,
+    "itinerary": [
+      "Los Angeles",
+      "Ensenada",
+      "Catalina Island",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "cdd8887a-df72-4419-ba8f-ed1350d3cf5c",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-09-17",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Puerto Plata",
+      "Bimini",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "b3a8b597-fbf5-47d2-ad92-52d3f2515148",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-09-19",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "3bcf0450-59bf-4a85-a3fb-b478e441d554",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-09-20",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "Aruba",
+      "Curacao",
+      "St. Lucia",
+      "Antigua",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "b91093d0-4991-4936-92d8-0f4015156512",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-09-22",
+    "nights": 5,
+    "itinerary": [
+      "Los Angeles",
+      "Catalina Island",
+      "Ensenada",
+      "San Diego",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "03712414-3a85-4e4d-84ea-14d72f488727",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-09-24",
+    "nights": 6,
+    "itinerary": [
+      "Miami",
+      "Amber Cove",
+      "San Juan",
+      "Grand Turk",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "5cd977d9-86fd-4705-b2b5-de1a0e026ea6",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-09-26",
+    "nights": 5,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Key West",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "03e50085-cb83-4702-bb08-562863edcabc",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-09-27",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "St. Maarten",
+      "Barbados",
+      "Tortola",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "20d38a8f-3f31-46dd-b275-2871917bef4d",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-09-29",
+    "nights": 4,
+    "itinerary": [
+      "Los Angeles",
+      "Ensenada",
+      "Catalina Island",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "3d1e45fd-658d-4212-baec-950322ac5f76",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-10-01",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Puerto Plata",
+      "Bimini",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "e654d0ba-5ca4-45ef-959f-f8cb4f66d857",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-10-03",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "f0fad303-dc86-41c1-82c5-f2f791e578be",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-10-04",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "Aruba",
+      "Curacao",
+      "St. Lucia",
+      "Antigua",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "0d390967-e37c-4385-adae-ec073df7693c",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-10-06",
+    "nights": 5,
+    "itinerary": [
+      "Los Angeles",
+      "Catalina Island",
+      "Ensenada",
+      "San Diego",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "cba6f44a-fe03-4728-9f16-177bf29a518f",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-10-08",
+    "nights": 6,
+    "itinerary": [
+      "Miami",
+      "Amber Cove",
+      "San Juan",
+      "Grand Turk",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "4eafa5df-6518-47d0-a258-3e3e8dacfd3a",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-10-10",
+    "nights": 5,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Key West",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "02d7dd40-95a3-43ac-aed3-f565cbf2a918",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-10-11",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "St. Maarten",
+      "Barbados",
+      "Tortola",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "790563d8-3e77-4c18-9e64-5af881e648ea",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-10-13",
+    "nights": 4,
+    "itinerary": [
+      "Los Angeles",
+      "Ensenada",
+      "Catalina Island",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "609dd41e-f95b-45b6-9bdd-91e2e2c524d1",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-10-15",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Puerto Plata",
+      "Bimini",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "5934677d-6e41-4f0f-9836-99e96b6dbe41",
+    "ship": "Scarlet Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-10-17",
+    "nights": 4,
+    "itinerary": [
+      "Miami",
+      "Bimini",
+      "Cozumel",
+      "Miami"
+    ],
+    "image": "https://customer-assets-agu9un31.emergentagent.net/job_voyager-connect-4/artifacts/u0f4sdju_bimini-04.jpeg",
+    "member_count": 0
+  },
+  {
+    "id": "ebaf735e-823a-4726-bdac-1eef5c6ad6e4",
+    "ship": "Valiant Lady",
+    "port": "San Juan, PR",
+    "region": "Caribbean",
+    "sail_date": "2026-10-18",
+    "nights": 7,
+    "itinerary": [
+      "San Juan",
+      "Aruba",
+      "Curacao",
+      "St. Lucia",
+      "Antigua",
+      "San Juan"
+    ],
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "ded1bdad-c0b7-43dd-82bb-279f962b707c",
+    "ship": "Brilliant Lady",
+    "port": "Los Angeles, CA",
+    "region": "Mexican Riviera",
+    "sail_date": "2026-10-20",
+    "nights": 5,
+    "itinerary": [
+      "Los Angeles",
+      "Catalina Island",
+      "Ensenada",
+      "San Diego",
+      "Los Angeles"
+    ],
+    "image": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  },
+  {
+    "id": "ef5a3ee0-3765-4fe4-8222-8a02f472d415",
+    "ship": "Resilient Lady",
+    "port": "Miami, FL",
+    "region": "Caribbean",
+    "sail_date": "2026-10-22",
+    "nights": 6,
+    "itinerary": [
+      "Miami",
+      "Amber Cove",
+      "San Juan",
+      "Grand Turk",
+      "Miami"
+    ],
+    "image": "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000",
+    "member_count": 0
+  }
+]
