@@ -49,7 +49,7 @@ def _seed() -> Dict[str, List[Dict[str, Any]]]:
     booking_links = load("booking_links.json", {})
     return {
         "cruises": load("cruises.json", []),
-        "profiles": load("profiles.json", []),
+        "profiles": (load("profiles.json", []) if os.environ.get("SEED_PROFILES") == "1" else []),
         "deals": load("deals.json", []),
         "messages": [],
         "dms": [],
